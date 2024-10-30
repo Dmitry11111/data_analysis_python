@@ -9,6 +9,8 @@
 ➜Составлены гипотезы о данных и выполнена проверка соответствующих гипотез.  
 ➜Подготовлен и опубликован дашборд с выводами по поставленной бизнес-задаче.  
 
+### Исходный фаил  [home price](https://example.com/).
+
 Исходные данные:  
 Данные df.info() датасета home price  
 <img width="260" alt="info_before" src="https://github.com/user-attachments/assets/f971f40e-ad81-495c-9be8-8f02fe0872f5"> <br>    
