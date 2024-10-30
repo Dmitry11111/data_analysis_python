@@ -13,4 +13,6 @@
 Исходные данные:
 Данные df.info() датасета home price
 
-<img width="260" alt="print(df info_before" src="https://github.com/user-attachments/assets/f971f40e-ad81-495c-9be8-8f02fe0872f5">
+<img width="260" alt="print(df info_before" src="https://github.com/user-attachments/assets/f971f40e-ad81-495c-9be8-8f02fe0872f5"> 
+<img width="493" alt="describe before" src="https://github.com/user-attachments/assets/c8c16f09-032e-4b07-9a9e-c01921c671d3">
+
