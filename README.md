@@ -21,12 +21,26 @@
 
 Пример кода на python:  
 ```python
-##для столбца 'ceiling_height' (высота потолков) мы заменим пропущенные значения на медиану,
+##для столбца 'ceiling_height' (высота потолков) мы заменим пропущенные значения на медиану
 ##посчитаем медиану
 median_ceiling_height = float(df_cleaned['ceiling_height'].median())
-print("Медиана высоты потолков:", median_ceiling_height)  
+print("Медиана высоты потолков:", median_ceiling_height)
+  
 ##Заменяем значения высоты потолков меньше 2,45 м на медиану
 df_cleaned['ceiling_height'] = np.where(df_cleaned['ceiling_height'] < 2.45, median_ceiling_height,
 df_cleaned['ceiling_height'])
-```
 
+#создаем фильтр для удаления аномалий,
+filt = ((df_cleaned.last_price.between(np.nanpercentile(df_cleaned.last_price, 1),
+np.nanpercentile(df_cleaned.last_price, 99))) #для last price исходя из графика,
+задаем нижнюю границу 1 процентиль и 99 процентиль
+& (df_cleaned.total_area.between(np.nanpercentile(df_cleaned.total_area, 1),
+np.nanpercentile(df_cleaned.total_area, 99))) #для total_area задаем от 1 до 99
+процентиля
+```
+### После удаления аномальных значений осталось 84.33% данных.
+### 23699->19912
+
+### Ящичная диаграмма с усами ‘boxplot’(до и после)
+
+![boxplots_before_after](https://github.com/user-attachments/assets/c1c0ae3d-12d8-48e8-92ef-658bd74b60e1)
